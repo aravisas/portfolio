@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"&gt;</p>
+<p class="p1">&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</p>
+<p class="p1">&lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;</p>
+<p class="p1">&lt;meta name="format-detection" content="telephone=no"&gt;</p>
+<p class="p1">&lt;title&gt;Amit Sastry — Engineer. Artist. Builder.&lt;/title&gt;</p>
+<p class="p1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1">&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Tiro+Devanagari+Hindi&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Syne:wght@400;700;800&amp;display=swap&amp;subset=latin" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--saffron: #FF6B1A;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--deep-night: #12100E;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--chai: #C4843A;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--turmeric: #F2C14E;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--street-grey: #1C1916;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--plaster: #E8DFD0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--white: #FDFBF7;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--muted: #8A7D6B;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--gutter: clamp(1.5rem, 5vw, 4rem);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>html { scroll-behavior: smooth; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { background: var(--deep-night); color: var(--white); font-family: 'Syne', sans-serif; cursor: auto; overflow-x: hidden; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* Custom Cursor - Hidden on Touch */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cursor-ready body { cursor: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cursor { position: fixed; width: 12px; height: 12px; background: var(--saffron); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width 0.2s, height 0.2s; mix-blend-mode: difference; display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.no-touch .cursor { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cursor.hovering { width: 40px; height: 40px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* Jataka Noise Overlay */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: max(1.2rem, env(safe-area-inset-top)) var(--gutter) 1.2rem; display: flex; justify-content: space-between; align-items: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,8,6,0.95), transparent); pointer-events: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.15em; color: var(--saffron); text-decoration: none; position: relative; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-links { display: flex; gap: 1.6rem; list-style: none; position: relative; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-links a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--plaster); text-decoration: none; opacity: 0.7; transition: opacity 0.2s, color 0.2s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-links a:hover { opacity: 1; color: var(--saffron); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#hero { min-height: 100vh; min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-left { padding: calc(var(--gutter)*3) var(--gutter) var(--gutter); display: flex; flex-direction: column; justify-content: flex-end; position: relative; z-index: 2; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s forwards 0.3s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 9vw, 8rem); line-height: 0.9; color: var(--white); margin-bottom: 0.5rem; opacity: 0; animation: fadeUp 0.8s forwards 0.5s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-name span { color: var(--saffron); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-tagline { font-family: 'Tiro Devanagari Hindi', serif; font-size: clamp(1rem, 1.8vw, 1.35rem); color: var(--chai); margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s forwards 0.7s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-desc { font-size: 0.9rem; line-height: 1.7; color: var(--plaster); opacity: 0; max-width: 38ch; margin-bottom: 2.5rem; animation: fadeUp 0.8s forwards 0.9s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s forwards 1.1s; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-primary { background: var(--saffron); color: var(--deep-night); font-family: 'Space Mono', monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 1.1rem 2rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; display: inline-block; cursor: pointer; border: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-primary:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 var(--turmeric); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-ghost { border: 1px solid rgba(196,132,58,0.5); color: var(--chai); font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 1.1rem 2rem; text-decoration: none; transition: 0.2s; display: inline-block; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-ghost:hover { border-color: var(--saffron); color: var(--saffron); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-right { position: relative; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-right img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; filter: saturate(0.9) contrast(1.1); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-right::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--deep-night) 0%, transparent 30%); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>section { position: relative; border-top: 1px solid rgba(196,132,58,0.06); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.55em; text-transform: uppercase; color: var(--saffron); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1; color: var(--white); margin-bottom: 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.chapter-num { font-family: 'Bebas Neue', sans-serif; font-size: clamp(6rem, 15vw, 14rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(196,132,58,0.12); position: absolute; right: var(--gutter); top: -1rem; pointer-events: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#perspective, #craft, #systems, #microsoft { padding: 8rem var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.reveal { opacity:0; transform:translateY(30px); transition: 0.8s cubic-bezier(0.34,1.56,0.64,1); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.reveal.visible { opacity:1; transform:translateY(0); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.roots-images { position: relative; height: 500px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.roots-images img { position: absolute; object-fit: cover; width: 60%; height: 80%; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.roots-img-1 { top: 0; left: 0; filter: sepia(0.2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.roots-img-2 { bottom: 0; right: 0; z-index: 2; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* Milestone 1: Microsoft Narrative Styling */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ms-body { font-size: 0.95rem; line-height: 1.6; color: var(--plaster); opacity: 0.8; max-width: 50ch; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ms-title span { color: #0078D4; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#playbook { padding: 8rem var(--gutter); background: rgba(22,19,16,0.5); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.playbook-inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.playbook-cover { position: relative; height: 550px; background: #000; border: 1px solid var(--saffron); box-shadow: 20px 20px 0 rgba(255,107,26,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.playbook-cover iframe { width: 100%; height: 100%; border: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer { background: var(--deep-night); padding: 4rem var(--gutter); border-top: 1px solid rgba(196,132,58,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-left { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--muted); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-right { display: flex; gap: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-right a { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--plaster); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: 0.2s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-right a:hover { color: var(--saffron); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#hero, #perspective, #craft, #systems, #microsoft, .playbook-inner { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links { display: flex; overflow-x: auto; gap: 1rem; max-width: 60vw; -webkit-overflow-scrolling: touch; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links::-webkit-scrollbar { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-name { font-size: 5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* Jataka Glow Effect */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#jataka-glow { position: fixed; inset: 0; pointer-events: none; z-index: 1; background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(196,132,58,0.08) 0%, transparent 50%); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.fade-out { opacity: 0; transform: translateY(-10px); }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="cursor" class="cursor"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;div id="jataka-glow"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#" class="nav-logo"&gt;AMIT SASTRY&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;ul class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#perspective"&gt;Perspective&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#craft"&gt;Craft&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#systems"&gt;Systems&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#playbook"&gt;Playbook&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/ul&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-eyebrow"&gt;Product Manager • Engineer • Builder&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="hero-name"&gt;AMIT &lt;span&gt;SASTRY&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-tagline"&gt;&lt;span id="hero-identity"&gt;Bengaluru to Redmond.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="hero-desc"&gt;Building at the intersection of high-scale engineering and human-centric design. Currently scaling systems at Microsoft.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-cta-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#playbook" class="btn-primary btn-magnetic"&gt;Read the Playbook&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://linkedin.com/in/amit-sastry-1065b7212" target="_blank" class="btn-ghost"&gt;LinkedIn ↗&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" alt="Amit Sastry Portrait"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="perspective"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chapter-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="roots-images reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://images.unsplash.com/photo-1590050752117-23a9d7fc21ad?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="roots-img-1" alt="Bengaluru Street Perspective"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://images.unsplash.com/photo-1598974357851-cb05bf3714a1?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="roots-img-2" alt="Roots and Culture"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Roots &amp; Perspective&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;THE STREET &lt;br&gt; &amp; THE SYMBOL&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="ms-body"&gt;The best products aren't just technically perfect—they are culturally resonant. My journey began in Bengaluru, where I learned that empathy is the most powerful tool in a PM's kit.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="craft"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chapter-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Engineering Craft&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;BUILDING &lt;br&gt; FOR RESILIENCE&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="ms-body"&gt;I spent years in the trenches of full-stack development. I believe that understanding the "how" (engineering) makes you 10x better at the "why" (product).&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" style="width:100%; height:400px; object-fit:cover;" alt="Engineering Craft"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="systems"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chapter-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" style="width:100%; height:400px; object-fit:cover;" alt="Systems and Scale"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Systems &amp; Scale&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;GLOBAL &lt;br&gt; INFRASTRUCTURE&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="ms-body"&gt;Scaling for millions requires a shift from "features" to "systems." I focus on reliability, accessibility, and the long-term health of the product ecosystem.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="microsoft"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chapter-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Current Impact&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="ms-title"&gt;SCALING AT &lt;span&gt;MICROSOFT&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="ms-body"&gt;At Microsoft, scale isn't just a number—it’s a responsibility. It’s the realization that a single button I design or a logic flow I build affects the daily rhythm of millions of people. My time here has taught me that true 'Enterprise' work isn't about being cold or rigid; it’s about being incredibly reliable. I spend my days solving puzzles at the intersection of complex legacy systems and future-facing AI, figuring out how to make 'Big Tech' feel personal and supportive. It’s where the grit of Bengaluru meets the precision of Redmond.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" style="width:100%; height:400px; object-fit:cover;" alt="Microsoft Campus Impact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="playbook"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="playbook-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="playbook-cover reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;iframe src="https://amit-sastry.github.io/PM-Playbook/" title="PM Playbook Preview"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-label"&gt;Knowledge Base&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;THE PM &lt;br&gt; PLAYBOOK&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="ms-body"&gt;I don't just build; I document. The Playbook is my collection of frameworks, failure logs, and product philosophies.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://amit-sastry.github.io/PM-Playbook/" target="_blank" class="btn-primary btn-magnetic" style="margin-top: 2rem;"&gt;Open Full Playbook ↗&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-left"&gt;© 2025 Amit Sastry — Bengaluru → Microsoft · Built with ❤️ &amp;amp; Code&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://linkedin.com/in/amit-sastry-1065b7212" target="_blank"&gt;LinkedIn&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://github.com/amit-sastry" target="_blank" style="color: var(--saffron);"&gt;View Source ↗&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#playbook"&gt;Playbook&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// Logic for interactivity</p>
+<p class="p1">const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints &gt; 0);</p>
+<p class="p1">if (!isTouchDevice) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.documentElement.classList.add('no-touch');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.documentElement.classList.add('cursor-ready');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cursor = document.getElementById('cursor');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.addEventListener('mousemove', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('a, button').forEach(el =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>el.addEventListener('mouseenter', () =&gt; cursor.classList.add('hovering'));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>el.addEventListener('mouseleave', () =&gt; cursor.classList.remove('hovering'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Reveal animation</p>
+<p class="p1">const observer = new IntersectionObserver((entries) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>entries.forEach(entry =&gt; { if (entry.isIntersecting) entry.target.classList.add('visible'); });</p>
+<p class="p1">}, { threshold: 0.1 });</p>
+<p class="p1">document.querySelectorAll('.reveal').forEach(el =&gt; observer.observe(el));</p>
+<p class="p2"><br></p>
+<p class="p1">// Hero text cycle</p>
+<p class="p1">const heroIdentities = ['Problem Solver.', 'Systems Thinker.', 'PM at Microsoft.', 'Bengaluru to Redmond.'];</p>
+<p class="p1">let heroIdx = 0;</p>
+<p class="p1">const heroEl = document.getElementById('hero-identity');</p>
+<p class="p1">setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(heroEl) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heroEl.classList.add('fade-out');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>heroIdx = (heroIdx + 1) % heroIdentities.length;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>heroEl.textContent = heroIdentities[heroIdx];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>heroEl.classList.remove('fade-out');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, 400);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}, 3000);</p>
+<p class="p2"><br></p>
+<p class="p1">// Glow effect</p>
+<p class="p1">document.addEventListener('mousemove', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const glow = document.getElementById('jataka-glow');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(glow) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>glow.style.setProperty('--mx', e.clientX + 'px');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>glow.style.setProperty('--my', e.clientY + 'px');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// Magnetic Buttons</p>
+<p class="p1">document.querySelectorAll('.btn-magnetic').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.addEventListener('mousemove', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rect = btn.getBoundingClientRect();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.style.transform = `translate(${(e.clientX - (rect.left + rect.width/2)) * 0.3}px, ${(e.clientY - (rect.top + rect.height/2)) * 0.3}px)`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.addEventListener('mouseleave', () =&gt; btn.style.transform = 'translate(0,0)');</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
